@@ -1,0 +1,6 @@
+customer_id,first_name,annual_income,dob,postal_code,email_address,age_years,price_usd
+C001,Ada,85000,1990-04-12,02139,ada@example.test,34,50.00
+C002,Grace,120000,1985-12-09,10001,grace@example.test,39,72.00
+C003,Linus,95000,1977-12-28,98101,linus@example.test,46,64.00
+C004,Barbara,,1969-12-02,94105,barbara@example.test,55,88.00
+

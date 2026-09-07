@@ -1,0 +1,210 @@
+[
+  {
+    "source_dataset": "customer_master",
+    "source_column": "customer_id",
+    "target_dataset": "customer_platform",
+    "target_column": "external_customer_id",
+    "expected_relationship": "MATCH",
+    "notes": "Both identify the same customer despite string/integer representation."
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "given_name",
+    "target_dataset": "customer_platform",
+    "target_column": "firstName",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "family_name",
+    "target_dataset": "customer_platform",
+    "target_column": "surname",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "birth_date",
+    "target_dataset": "customer_platform",
+    "target_column": "dateOfBirth",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "email",
+    "target_dataset": "customer_platform",
+    "target_column": "emailAddress",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "phone_number",
+    "target_dataset": "customer_platform",
+    "target_column": "telephone",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "street_address",
+    "target_dataset": "customer_platform",
+    "target_column": "mailingAddress",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "city_name",
+    "target_dataset": "customer_platform",
+    "target_column": "municipality",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "state_code",
+    "target_dataset": "customer_platform",
+    "target_column": "regionCode",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "postal_code",
+    "target_dataset": "customer_platform",
+    "target_column": "zip",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "country_code",
+    "target_dataset": "customer_platform",
+    "target_column": "nation",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "account_created_at",
+    "target_dataset": "customer_platform",
+    "target_column": "signupTimestamp",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "account_status",
+    "target_dataset": "customer_platform",
+    "target_column": "membershipState",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "annual_income_usd",
+    "target_dataset": "customer_platform",
+    "target_column": "yearlyEarningsUsd",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "credit_limit_usd",
+    "target_dataset": "customer_platform",
+    "target_column": "accountCreditLimitUsd",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "loyalty_points",
+    "target_dataset": "customer_platform",
+    "target_column": "rewardsBalance",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "last_purchase_date",
+    "target_dataset": "customer_platform",
+    "target_column": "mostRecentOrderDate",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "order_count",
+    "target_dataset": "customer_platform",
+    "target_column": "lifetimeOrders",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "average_order_value_usd",
+    "target_dataset": "customer_platform",
+    "target_column": "avgOrderValueUsd",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "preferred_language",
+    "target_dataset": "customer_platform",
+    "target_column": "languagePreference",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "marketing_opt_in",
+    "target_dataset": "customer_platform",
+    "target_column": "subscribedToMarketing",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "employee_count",
+    "target_dataset": "customer_platform",
+    "target_column": "staffTotal",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "company_name",
+    "target_dataset": "customer_platform",
+    "target_column": "organizationName",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "website_url",
+    "target_dataset": "customer_platform",
+    "target_column": "companyWebsite",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "tax_identifier",
+    "target_dataset": "customer_platform",
+    "target_column": "taxId",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "age_years",
+    "target_dataset": "customer_platform",
+    "target_column": "dateOfBirth",
+    "expected_relationship": "RELATED",
+    "notes": "Age is derived from date of birth and is not interchangeable with it."
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "item_price_usd",
+    "target_dataset": "customer_platform",
+    "target_column": "itemPriceEur",
+    "expected_relationship": "CONFLICT",
+    "notes": "Both fields represent price but declare different currencies."
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "source_numeric_measure_01",
+    "target_dataset": "customer_platform",
+    "target_column": "target_text_attribute_01",
+    "expected_relationship": "NO_MATCH",
+    "notes": "Deliberately numeric-to-text distractor."
+  },
+  {
+    "source_dataset": "customer_master",
+    "source_column": "source_text_attribute_01",
+    "target_dataset": "customer_platform",
+    "target_column": "target_numeric_measure_01",
+    "expected_relationship": "NO_MATCH",
+    "notes": "Deliberately text-to-numeric distractor."
+  }
+]

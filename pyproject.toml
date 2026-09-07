@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-ontology-mapper"
+version = "0.1.0"
+description = "A local-first foundation for profiling tabular data for schema mapping."
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "huggingface-hub>=0.24",
+  "tokenizers>=0.19",
+  "onnxruntime>=1.18",
+  "openai>=1.0",
+  "python-dotenv>=1.0",
+]
+
+[project.scripts]
+ontology-mapper = "ontology_mapper.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

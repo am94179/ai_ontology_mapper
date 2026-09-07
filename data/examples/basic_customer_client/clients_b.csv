@@ -1,0 +1,6 @@
+client_identifier,fname,salary,date_of_birth,zip_code,emailAddress,price_eur
+1001,Ada,85000,1990-04-12,02139,ada@example.test,46.00
+1002,Grace,120000,1985-12-09,10001,grace@example.test,66.00
+1003,Linus,95000,1977-12-28,98101,linus@example.test,59.00
+1004,Barbara,105000,1969-12-02,94105,barbara@example.test,81.00
+

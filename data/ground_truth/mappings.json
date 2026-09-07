@@ -1,0 +1,66 @@
+[
+  {
+    "source_dataset": "customers_a",
+    "source_column": "customer_id",
+    "target_dataset": "clients_b",
+    "target_column": "client_identifier",
+    "expected_relationship": "MATCH",
+    "notes": "Both identify a customer/client."
+  },
+  {
+    "source_dataset": "customers_a",
+    "source_column": "first_name",
+    "target_dataset": "clients_b",
+    "target_column": "fname",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customers_a",
+    "source_column": "annual_income",
+    "target_dataset": "clients_b",
+    "target_column": "salary",
+    "expected_relationship": "MATCH"
+  },
+  {
+    "source_dataset": "customers_a",
+    "source_column": "dob",
+    "target_dataset": "clients_b",
+    "target_column": "date_of_birth",
+    "expected_relationship": "MATCH"
+  }
+  ,
+  {
+    "source_dataset": "customers_a",
+    "source_column": "email_address",
+    "target_dataset": "clients_b",
+    "target_column": "emailAddress",
+    "expected_relationship": "MATCH",
+    "notes": "Same lexical name expressed with snake_case and camelCase."
+  },
+  {
+    "source_dataset": "customers_a",
+    "source_column": "postal_code",
+    "target_dataset": "clients_b",
+    "target_column": "client_identifier",
+    "expected_relationship": "NO_MATCH",
+    "notes": "Deliberately unrelated pair for later false-positive checks."
+  }
+
+  ,
+  {
+    "source_dataset": "customers_a",
+    "source_column": "age_years",
+    "target_dataset": "clients_b",
+    "target_column": "date_of_birth",
+    "expected_relationship": "RELATED",
+    "notes": "Age can be derived from date of birth but is not interchangeable with it."
+  },
+  {
+    "source_dataset": "customers_a",
+    "source_column": "price_usd",
+    "target_dataset": "clients_b",
+    "target_column": "price_eur",
+    "expected_relationship": "CONFLICT",
+    "notes": "Both represent price but use different currencies."
+  }
+]
